@@ -65,8 +65,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let firstResult = results.first {
                 if firstResult.identifier.contains("hotdog") {
                     self.navigationItem.title = "Hotdog!"
+                    self.navigationController?.navigationBar.barTintColor = UIColor.green
                 } else {
                     self.navigationItem.title = "Not Hotdog!"
+                    self.navigationController?.navigationBar.barTintColor = UIColor.red
                 }
             }
          
