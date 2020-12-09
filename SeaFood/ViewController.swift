@@ -62,7 +62,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         
     //10. Print out the results from clasification
-            print(results)
+            if let firstResult = results.first {
+                if firstResult.identifier.contains("hotdog") {
+                    self.navigationItem.title = "Hotdog!"
+                } else {
+                    self.navigationItem.title = "Not Hotdog!"
+                }
+            }
          
     //9. Once the image is clasified, this callback gets trigered and we get back a request or an error
         }
